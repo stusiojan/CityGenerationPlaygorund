@@ -76,4 +76,6 @@ This is macOS native app. To run app you will need:
 Simply run on macOs target
 
 ![](/Reports/Figures/app_window.jpg)
+
 ![](/Reports/Figures/generated_roads.jpg)
+*NOTE: This is a demo product with random generation rules, so the resulting road network is random too*
