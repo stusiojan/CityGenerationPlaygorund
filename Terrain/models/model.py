@@ -3,6 +3,8 @@ from dataclasses import dataclass
 from enum import Enum
 
 """
+Proces wyboru struktur danych
+
 Cele:
 1. Efektywność pamięciowa: Wykorzystanie NumPy zapewnia wydajne przechowywanie i operacje na dużych tablicach danych.
 2. Łatwy dostęp do danych: Metody pomocnicze pozwalają na szybkie pobieranie informacji o konkretnych punktach i ich okolicy.
@@ -33,6 +35,14 @@ class NodeType(Enum):
 
 @dataclass
 class CityNode:
+    """
+    Klasa reprezentująca węzeł miejski.
+    Attributes:
+        x (int): Współrzędna X węzła.
+        y (int): Współrzędna Y węzła.
+        importance (float): Waga węzła, gdzie 0.0 to najmniej ważny, a 1.0 to najważniejszy.
+    """
+
     x: int
     y: int
     importance: float
@@ -44,28 +54,31 @@ class CityNode:
 
 
 class TerrainData:
+    """
+    Klasa przechowująca dane o terenie w formie numerycznego modelu terenu (NMT).
+
+    Attributes:
+        width (int): Szerokość mapy.
+        height (int): Wysokość mapy.
+        population_density (np.ndarray): Mapa gęstości zaludnienia (wartości 0.0-1.0).
+        elevation (np.ndarray): Mapa wysokości terenu (wartości w metrach n.p.m).
+        water_map (np.ndarray): Mapa terenów wodnych (używamy enum WaterType).
+        slope_map (np.ndarray): Mapa nachylenia terenu (wartości 0.0-1.0, gdzie 1.0 to maksymalne nachylenie).
+        city_nodes (list): Lista węzłów miejskich (CityNode).
+        buildable_mask (np.ndarray): Maska terenów niedostępnych pod zabudowę (z wartościami True/False).
+    Args:
+        width (int): Szerokość mapy w pikselach.
+        height (int): Wysokość mapy w pikselach.
+    """
+
     def __init__(self, width: int, height: int):
-        # Wymiary map
         self.width = width
         self.height = height
-
-        # Inicjalizacja wszystkich map jako tablice NumPy
-        # Mapa gęstości zaludnienia (wartości 0.0-1.0)
         self.population_density = np.zeros((height, width), dtype=np.float32)
-
-        # Mapa wysokości terenu (wartości w metrach n.p.m)
         self.elevation = np.zeros((height, width), dtype=np.float32)
-
-        # Mapa terenów wodnych (używamy enum WaterType)
         self.water_map = np.zeros((height, width), dtype=np.int8)
-
-        # Mapa nachylenia terenu (wartości 0.0-1.0, gdzie 1.0 to maksymalne nachylenie)
         self.slope_map = np.zeros((height, width), dtype=np.float32)
-
-        # Lista węzłów miejskich
         self.city_nodes = []
-
-        # Maska terenów niedostępnych pod zabudowę (True/False)
         self.buildable_mask = np.ones((height, width), dtype=bool)
 
     def add_city_node(self, node: CityNode):
