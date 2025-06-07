@@ -1,9 +1,38 @@
 # CityGenerationPlaygorund
 
-# Terrain module
+## 🔨 Project structure
+
+```
+├── README.md          <- The top-level README for developers using this project.
+│
+├── Terrain            <- Terrain extraction module
+│   │
+│   ├── convert_asc.py <- Code for converting and rendering terrain.
+│   ├── config.py      <- Module variables
+│   ├── makefile       <- Makefile with convenience commands.
+│   ├── data           <- ASCII terrain models.
+│   └── models
+│       └── model.py   <- Data structures for terrain data
+│
+└── Road-generation-alg/Road-gen-alg        <- macOS app
+    │
+    ├── Road-gen-alg
+    │   ├── Models                          <- Graph representation of roads with abstractions.
+    │   ├── RoadGeneration                  <- Road generation algorithm logic
+    │   ├── Views                           <- Rendering logic
+    │   └── Road_gen_algApp.swift           <- Apps entry point
+    │
+    ├── Road-gen-alg.xcodeproj              <- Xcode project file
+    │
+    ├── Road-gen-algTests                   <- tests
+    │
+    └── Road-gen-algUITests                 <- UI tests
+```
+
+
+# 🌍 Terrain module
 
 This module is responsible for terrain data extraction from `.asc` file.
-I have propose here data structure that best suits my needs.
 
 ## Setup and run
 
@@ -11,7 +40,7 @@ I have propose here data structure that best suits my needs.
 2. Prepare conda environment: `make create_conda_env` & `make activate_conda_env`
 3. Run `make render` to render terrain
 
-# Road generation algorithm module
+# 🧮 Road generation algorithm module
 
 L - systems are considered "go to" when it comes to procedural road generation.
 
@@ -34,3 +63,12 @@ until Q is empty
 ```
 
 In this project I'll try to implement both algorithms to decide, which is better for what task.
+
+## Setup and run
+
+This is macOS native app. To run app you will need:
+- Xcode 16+
+- Swift 6+
+- MacOS 15+
+
+Simply run on macOs target
