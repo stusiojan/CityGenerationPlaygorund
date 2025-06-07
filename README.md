@@ -5,6 +5,8 @@
 ```
 ├── README.md          <- The top-level README for developers using this project.
 │
+├── Reports            <- Project reports
+│
 ├── Terrain            <- Terrain extraction module
 │   │
 │   ├── convert_asc.py <- Code for converting and rendering terrain.
@@ -72,3 +74,6 @@ This is macOS native app. To run app you will need:
 - MacOS 15+
 
 Simply run on macOs target
+
+![](/Reports/Figures/app_window.jpg)
+![](/Reports/Figures/generated_roads.jpg)
