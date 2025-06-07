@@ -196,7 +196,6 @@
 			mainGroup = 3D115EF12D3127280014AFC6;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				3D0484E82DB9219C0021D155 /* XCLocalSwiftPackageReference "../../../../wp/pixel/distribution" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3D115EFB2D3127280014AFC6 /* Products */;
@@ -552,13 +551,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCLocalSwiftPackageReference section */
-		3D0484E82DB9219C0021D155 /* XCLocalSwiftPackageReference "../../../../wp/pixel/distribution" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../../../wp/pixel/distribution;
-		};
-/* End XCLocalSwiftPackageReference section */
 	};
 	rootObject = 3D115EF22D3127280014AFC6 /* Project object */;
 }
