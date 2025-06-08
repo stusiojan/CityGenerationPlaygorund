@@ -6,6 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3D2027942DF580620034C940 /* HeapModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3D2027932DF580620034C940 /* HeapModule */; };
+		3D7324692DF58659000C67A4 /* _RopeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3D7324682DF58659000C67A4 /* _RopeModule */; };
+		3D73246B2DF58659000C67A4 /* BitCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 3D73246A2DF58659000C67A4 /* BitCollections */; };
+		3D73246D2DF58659000C67A4 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 3D73246C2DF58659000C67A4 /* Collections */; };
+		3D73246F2DF58659000C67A4 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3D73246E2DF58659000C67A4 /* DequeModule */; };
+		3D7324712DF58659000C67A4 /* HashTreeCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 3D7324702DF58659000C67A4 /* HashTreeCollections */; };
+		3D7324732DF58659000C67A4 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 3D7324722DF58659000C67A4 /* OrderedCollections */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		3D115F0C2D31272A0014AFC6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +62,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D7324712DF58659000C67A4 /* HashTreeCollections in Frameworks */,
+				3D7324692DF58659000C67A4 /* _RopeModule in Frameworks */,
+				3D2027942DF580620034C940 /* HeapModule in Frameworks */,
+				3D73246F2DF58659000C67A4 /* DequeModule in Frameworks */,
+				3D73246D2DF58659000C67A4 /* Collections in Frameworks */,
+				3D7324732DF58659000C67A4 /* OrderedCollections in Frameworks */,
+				3D73246B2DF58659000C67A4 /* BitCollections in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +95,7 @@
 				3D115EFC2D3127280014AFC6 /* Road-gen-alg */,
 				3D115F0E2D31272A0014AFC6 /* Road-gen-algTests */,
 				3D115F182D31272A0014AFC6 /* Road-gen-algUITests */,
+				3D7324672DF58659000C67A4 /* Frameworks */,
 				3D115EFB2D3127280014AFC6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +108,13 @@
 				3D115F152D31272A0014AFC6 /* Road-gen-algUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		3D7324672DF58659000C67A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +137,13 @@
 			);
 			name = "Road-gen-alg";
 			packageProductDependencies = (
+				3D2027932DF580620034C940 /* HeapModule */,
+				3D7324682DF58659000C67A4 /* _RopeModule */,
+				3D73246A2DF58659000C67A4 /* BitCollections */,
+				3D73246C2DF58659000C67A4 /* Collections */,
+				3D73246E2DF58659000C67A4 /* DequeModule */,
+				3D7324702DF58659000C67A4 /* HashTreeCollections */,
+				3D7324722DF58659000C67A4 /* OrderedCollections */,
 			);
 			productName = "Road-gen-alg";
 			productReference = 3D115EFA2D3127280014AFC6 /* Road-gen-alg.app */;
@@ -196,6 +228,7 @@
 			mainGroup = 3D115EF12D3127280014AFC6;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				3D2027922DF580620034C940 /* XCRemoteSwiftPackageReference "swift-collections" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3D115EFB2D3127280014AFC6 /* Products */;
@@ -551,6 +584,55 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3D2027922DF580620034C940 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3D2027932DF580620034C940 /* HeapModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D2027922DF580620034C940 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = HeapModule;
+		};
+		3D7324682DF58659000C67A4 /* _RopeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D2027922DF580620034C940 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = _RopeModule;
+		};
+		3D73246A2DF58659000C67A4 /* BitCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D2027922DF580620034C940 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = BitCollections;
+		};
+		3D73246C2DF58659000C67A4 /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D2027922DF580620034C940 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		3D73246E2DF58659000C67A4 /* DequeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D2027922DF580620034C940 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = DequeModule;
+		};
+		3D7324702DF58659000C67A4 /* HashTreeCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D2027922DF580620034C940 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = HashTreeCollections;
+		};
+		3D7324722DF58659000C67A4 /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D2027922DF580620034C940 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3D115EF22D3127280014AFC6 /* Project object */;
 }
