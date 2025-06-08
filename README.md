@@ -75,7 +75,25 @@ This is macOS native app. To run app you will need:
 
 Simply run on macOs target
 
+### Current algorithm
+
+This implementation has only one global goal for keeping road dencity from 1 to 3 on each intersection.
+The road parameters are generated randomly within range that keeps the road network highly visible.
+Each iteration of algorithm has different color and width to help debugging steps and how constraints impact the results.
+
+
+![](/Reports/Figures/rng1.png)
+![](/Reports/Figures/rng2.png)
+![](/Reports/Figures/rng3.png)
+
+
+### Algorithm first implementation
+
 ![](/Reports/Figures/app_window.jpg)
 
 ![](/Reports/Figures/generated_roads.jpg)
 *NOTE: This is a demo product with random generation rules, so the resulting road network is random too*
+
+# 🔮 Future work
+
+Current algorithm implementation are based on 2D structs. Next step would be to make algorithm work on graph road respresentations that are implemented in `Road-generation-alg/Road-gen-alg/Models`.
