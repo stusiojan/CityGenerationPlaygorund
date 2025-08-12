@@ -19,3 +19,7 @@ playground.xcworkspace
 
 *.pyc
 **__pycache__/
+
+# Rust
+
+**/target
