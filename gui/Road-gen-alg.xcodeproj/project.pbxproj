@@ -45,16 +45,6 @@
 			path = "Road-gen-alg";
 			sourceTree = "<group>";
 		};
-		3D115F0E2D31272A0014AFC6 /* Road-gen-algTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Road-gen-algTests";
-			sourceTree = "<group>";
-		};
-		3D115F182D31272A0014AFC6 /* Road-gen-algUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Road-gen-algUITests";
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				3D115EFC2D3127280014AFC6 /* Road-gen-alg */,
-				3D115F0E2D31272A0014AFC6 /* Road-gen-algTests */,
-				3D115F182D31272A0014AFC6 /* Road-gen-algUITests */,
 				3D7324672DF58659000C67A4 /* Frameworks */,
 				3D115EFB2D3127280014AFC6 /* Products */,
 			);
@@ -162,9 +150,6 @@
 			dependencies = (
 				3D115F0D2D31272A0014AFC6 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				3D115F0E2D31272A0014AFC6 /* Road-gen-algTests */,
-			);
 			name = "Road-gen-algTests";
 			packageProductDependencies = (
 			);
@@ -184,9 +169,6 @@
 			);
 			dependencies = (
 				3D115F172D31272A0014AFC6 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				3D115F182D31272A0014AFC6 /* Road-gen-algUITests */,
 			);
 			name = "Road-gen-algUITests";
 			packageProductDependencies = (
